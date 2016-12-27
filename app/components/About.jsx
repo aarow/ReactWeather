@@ -3,8 +3,16 @@ var React = require('react');
 var About = (props) => {
   return (
     <div>
-      <h3>About</h3>
-      <p>This app is about weather and React</p>
+      <h1 className="text-center">About</h1>
+      <p>All about weather and react. Here's the source:</p>
+      <ol>
+        <li>
+          <a href="http://openweathermap.org/" >OpenWeatherMap</a>
+        </li>
+        <li>
+          <a href="https://github.com/aarow/ReactWeather" >GitHub</a>
+        </li>
+      </ol>
     </div>
   )
 }
