@@ -2,7 +2,7 @@ var React = require('react');
 
 var ErrorModal = React.createClass({
   propTypes: {
-    title: React.PropTypes.string.isRequired,
+    title: React.PropTypes.string,
     message: React.PropTypes.string.isRequired
   },
 
@@ -18,11 +18,12 @@ var ErrorModal = React.createClass({
     modal.open();
   },
   render: function(){
+    var {title, message} = this.props;
 
     return (
       <div id="error-modal" className="reveal tiny text-center" data-reveal="" >
-        <h4>Some Title</h4>
-        <p>Our error message!</p>
+        <h4>{title}</h4>
+        <p>{message}</p>
         <p>
           <button type="button" className="button hollow " data-close="" >
             Okay
